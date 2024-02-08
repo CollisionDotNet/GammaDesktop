@@ -1,0 +1,19 @@
+﻿<Window x:Class="GammaDesktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GammaDesktop"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="204" Width="313">
+    <Grid Margin="0,0,0,-6">
+        <Label x:Name="FileSourceLabel" Content="File for encoding:" HorizontalAlignment="Left" Margin="14,14,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="ChooseFileBtn" Content="Choose file..." HorizontalAlignment="Left" Margin="166,17,0,0" VerticalAlignment="Top" Click="ChooseFileBtn_Click"/>
+        <Label Content="Random number generator's seed:" HorizontalAlignment="Left" Margin="14,45,0,0" VerticalAlignment="Top"/>
+        <Button Content="Encode" HorizontalAlignment="Center" Margin="0,130,0,0" VerticalAlignment="Top" Click="Gamma_Btn"/>
+        <TextBox x:Name="SeedTextBox" HorizontalAlignment="Left" Margin="127,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
+        <Label Content="Hash function for random number generating" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,76,0,0"/>
+        <RadioButton x:Name="LCGRadio" GroupName="HashFunction" Content="LCG" HorizontalAlignment="Left" Margin="82,100,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <RadioButton x:Name="XorRadio" GroupName="HashFunction" Content="Xorshift" HorizontalAlignment="Left" Margin="187,100,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
